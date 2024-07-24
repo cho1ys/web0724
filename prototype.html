@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<script>
+    // String 객체에 'contain' 메서드를 추가합니다
+    String.prototype.contain = function(data){
+        return this.indexOf(data) >= 0 // 문자열에 'data'가 포함되어 있는지 확인합니다
+    }
+    
+    // Array 객체에 'contain' 메서드를 추가합니다
+    Array.prototype.contain = function(data){
+        return this.indexOf(data) >= 0 // 배열에 'data'가 포함되어 있는지 확인합니다
+    }
+
+    // 문자열 변수 'a'를 정의합니다
+    const a = '안녕하세요'
+    // '안녕'이 '안녕하세요'에 포함되어 있는지 확인합니다
+    console.log('안녕 in 안녕하세요:', a.contain('안녕'))
+    // '없는데'가 '안녕하세요'에 포함되어 있는지 확인합니다
+    console.log('없는데 in 안녕하세요:', a.contain('없는데'))
+
+    // 배열 변수 'b'를 정의합니다
+    const b = [273, 32, 103, 57, 52]
+    // 273이 배열 [273, 32, 103, 57, 52]에 포함되어 있는지 확인합니다
+    console.log('273 in [273,32,103,57,52]:', b.contain(273))
+    // 0이 배열 [273, 32, 103, 57, 52]에 포함되어 있는지 확인합니다
+    console.log('0 in [273,32,103,57,52]:', b.contain(0))
+</script>
+<body>
+    
+</body>
+</html>

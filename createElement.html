@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const hd = document.createElement('h1')
+            hd.textContent = '문서 객체 동적 생성'
+            hd.setAttribute('data-custom','사용자 정의 속성')
+            hd.style.color = 'brown'
+            hd.style.backgroundColor = 'beige'
+
+            document.body.appendChild(hd)
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

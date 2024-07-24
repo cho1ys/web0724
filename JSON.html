@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>JSON.stringify method</title> 
+</head>
+<script>
+    // 'data'라는 상수를 정의하고, 이는 객체들의 배열입니다
+    const data = [{
+        name : '혼자 공부하는 파이썬', // 첫 번째 책의 이름
+        price : 18000, // 첫 번째 책의 가격
+        publisher:'한빛미디어' // 첫 번째 책의 출판사
+    },{
+        name : 'HTML5 웹 프로그래밍 입문', // 두 번째 책의 이름
+        price : 26000, // 두 번째 책의 가격
+        publisher:'한빛아카데미' // 두 번째 책의 출판사
+    }]
+
+    // 'data' 배열을 JSON 문자열로 변환하여 콘솔에 출력합니다
+    console.log(JSON.stringify(data))
+
+    // 'data' 배열을 보기 좋게 정렬된 JSON 문자열로 변환하여 콘솔에 출력합니다 (2칸 들여쓰기 적용)
+    console.log(JSON.stringify(data,null,2))
+</script>
+<body>
+    
+</body>
+</html>
